@@ -1,17 +1,18 @@
 import React from "react";
-import { Button } from "@material-ui/core";
+import { IconButton } from "@material-ui/core";
+import SendIcon from "@material-ui/icons/Send";
 
 function Btn(props) {
   return (
-    <Button
+    <IconButton
       variant="contained"
       color="primary"
       type={props.type}
       onClick={props.sendMsg}
       disabled={props.disabled}
     >
-      Send Message
-    </Button>
+      <SendIcon />
+    </IconButton>
   );
 }
 
