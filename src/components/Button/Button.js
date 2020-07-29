@@ -1,12 +1,18 @@
-import React from 'react';
+import React from "react";
+import { Button } from "@material-ui/core";
 
-function Button(props) {
-
-  return(
-    <>
-      <button type={props.type} onClick={props.sendMsg}>Send Messages</button>
-    </>
+function Btn(props) {
+  return (
+    <Button
+      variant="contained"
+      color="primary"
+      type={props.type}
+      onClick={props.sendMsg}
+      disabled={props.disabled}
+    >
+      Send Message
+    </Button>
   );
 }
 
-export default Button;
+export default Btn;
