@@ -1,8 +1,24 @@
+.message-wrapper {
+  height: 70vh;
+  overflow-y: scroll;
+}
+
 .message-card {
-  padding: 5px !important;
-  margin: 5px;
-  width: fit-content !important;
-  position: relative;
+  margin: 10px;
+  width: fit-content;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.sender {
+  font-size: 12px;
+  color: #b3b3b3;
+}
+.sender-info {
+  font-size: 10px;
+  color: #cccccc;
 }
 
 .message-user {
@@ -16,5 +32,5 @@
 }
 
 .message-guest-card {
-  background-color: #b4b4b4 !important;
+  background-color: #f0eeee !important;
 }
