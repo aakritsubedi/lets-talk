@@ -15,12 +15,18 @@ function ChatApp() {
   const [userInfo, setUserInfo] = useState({})
 
   useEffect(() => {
-    setUsername(prompt("Please enter your name"));
+    let user = !localStorage.getItem('username') ? prompt("Please enter your name") : localStorage.getItem('username');
+    localStorage.setItem('username', user);
+    setUsername(user);
   }, []);
 
-  useEffect(async () => {
-    const userIpInfo = await fetch('https://ipapi.co/json').then(res => res.json());
-    setUserInfo(userIpInfo);
+  useEffect(() => {
+    async function fetchUserInfo() {
+      const userIpInfo = await fetch('https://ipapi.co/json').then(res => res.json());
+      setUserInfo(userIpInfo);
+    }
+
+    fetchUserInfo();
   }, [])
 
   useEffect(() => {
