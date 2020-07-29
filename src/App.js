@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ChatApp from './components/ChatApp';
+import ChatApp from 'components/ChatApp';
 
 import 'assets/css/App.css';
 
